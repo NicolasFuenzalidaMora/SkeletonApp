@@ -1,0 +1,44 @@
+
+
+<mat-slider min="1" max="5" step="0.5" value="1.5" color="accent">
+  <input matSliderThumb>
+</mat-slider> 
+
+<ion-item [ngClass]>
+  <ion-label position="floating">Nombre certificado</ion-label>
+  <ion-input [(ngModel)]="nombre.certificado"></ion-input>
+</ion-item>
+
+
+<br>
+<ion-item>
+  <mat-form-field class="mat-end">
+    <mat-label>Fecha de obtención</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Start date">
+      <input matEndDate placeholder="End date">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+</ion-item>
+<br>
+<div>¿esta vigente su certificado? <mat-slide-toggle></mat-slide-toggle></div>
+<br>
+<ion-item>
+  <mat-form-field class="mat-end">
+    <mat-label>Fecha de vencimiento</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Start date">
+      <input matEndDate placeholder="End date">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+</ion-item>
+
+<br>
+
+
+
+

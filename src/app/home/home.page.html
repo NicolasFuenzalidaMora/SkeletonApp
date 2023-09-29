@@ -1,0 +1,35 @@
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="start-position title-animation">
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Información del Usuario
+    </ion-card-header>
+    <ion-card-content>
+      <ion-segment [(ngModel)]="selectedSegment" (ionChange)="segmentChanged()">
+        <ion-segment-button value="mis-datos">
+          <ion-label>Mis Datos</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="experiencia-laboral">
+          <ion-label>Experiencia Laboral</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="certificaciones">
+          <ion-label>Certificaciones</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      <router-outlet></router-outlet>
+      <ion-button slot="end" [routerLink]="['/login']">Volver</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

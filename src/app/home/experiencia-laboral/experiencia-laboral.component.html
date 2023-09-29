@@ -1,0 +1,36 @@
+
+
+<mat-slider min="1" max="5" step="0.5" value="1.5" color="accent">
+  <input matSliderThumb>
+</mat-slider> 
+
+<ion-item [ngClass]>
+  <ion-label position="floating">Empresa</ion-label>
+  <ion-input [(ngModel)]="usuario.empresa"></ion-input>
+</ion-item>
+
+
+<br>
+<mat-form-field class="example-full-width">
+  <mat-label>Año Inicio</mat-label>
+  <input matInput [matDatepicker]="picker_first">
+  <mat-datepicker-toggle matIconSuffix [for]="picker_first"></mat-datepicker-toggle>
+  <mat-datepicker #picker_first></mat-datepicker>
+</mat-form-field>
+<br>
+<div>¿Trabaja actualmente aqui? <mat-slide-toggle></mat-slide-toggle></div>
+<br>
+<mat-form-field class="example-full-width">
+  <mat-label>Año Termino</mat-label>
+  <input matInput [matDatepicker]="picker_last">
+  <mat-datepicker-toggle matIconSuffix [for]="picker_last"></mat-datepicker-toggle>
+  <mat-datepicker #picker_last></mat-datepicker>
+</mat-form-field>
+<br>
+<ion-item [ngClass]>
+  <ion-label position="floating">Cargo</ion-label>
+  <ion-input [(ngModel)]="usuario.cargo"></ion-input>
+</ion-item>
+<br>
+<ion-button (click)="mostrarInformacion()">Mostrar</ion-button>
+
